@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eae8e0;
+    color: #2e2e2f;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+#wrapper {
+    background-color: #eae8e0;
+}
+
+header {
+    background-color: #eae8e0;
+    padding: 60px 0 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+nav {
+    border-top: 1px solid #9f9f9f;
+    border-bottom: 1px solid #9f9f9f;
+    background-color: #eae8e0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #9f9f9f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    letter-spacing: 2px;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+nav a:hover {
+    color:#000000;
+    font-weight: bold;
+}
+
+main {
+    padding: 40px 20% 100px 20%;
+    text-align: center;
+}
+
+h2 {
+    color: #a33b36;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+footer {
+    border-top: 1px solid #9f9f9f;
+    padding: 30px 5%;
+    text-align: center;
+    font-size: .75rem;
+    color: #9f9f9f;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#footer-left {
+    text-align: left;
+}
+
+#footer-right {
+    text-align: right;
+}
+
+.hero {
+    background-color: #000000;
+    width: 90%;
+    max-width: 800px;
+    aspect-ratio: 4 / 3;
+    margin: 40px auto;
+}
+
+.accent {
+    color: #a33b36;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-size: .9rem;
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 900px) {
+    #wrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    @supports (display: grid) {
+        header {grid-area: header;}
+        nav {grid-area: nav;}
+        .hero {grid-area: hero;}
+        main {grid-area: main;}
+        footer {grid-area: footer;}
+
+        #wrapper {
+            display: grid;
+            grid-template:
+                "header"
+                "nav"
+                "hero"
+                "main"
+                "footer"
+                1fr;
+        }
+    }
+}
