@@ -8,7 +8,7 @@
         <meta charset="utf-8">
     </head>
 
-    <body>
+       <body>
         <div id="wrapper">
             <header>
                 <h1>Mat Guzman</h1>
@@ -24,25 +24,25 @@
                 </ul>
             </nav>
 
-            <div id="homehero" class="hero">
-                <iframe 
-                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&rel=0" 
-                style="width:100%; height:100%; border:none;" 
-                allowfullscreen>
-                </iframe>
-            </div>
-
             <main>
-                <h2>MY VISION AND DESIGN PHILOSOPHY</h2>
+                <h2>CONTACT ME</h2>
+                <p>Feel free to reach out to me using the form below!</p>
 
-                <p>
-                    As a Fashion Design student at ASU Herberger Institute for Design and the Arts,
-                     I am dedicated to expanding my knowledge with real-world experience in the fashion 
-                     industry. With a love for menswear, i am driven to create timeless pieces that tell
-                     a story. Whether that be through sketches, fabric choice, or construction details my goal 
-                     is to bring my own perspective to the industry.
-                </p>
-                
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="email@example.com" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="888-888-8888" maxlength="12">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <input type="submit" id="mySubmit" value="Submit">
+                </form>
             </main>
 
             <footer>
